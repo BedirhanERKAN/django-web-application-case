@@ -1,1 +1,1 @@
-# django-web-application-case
+# Django Web Application Case

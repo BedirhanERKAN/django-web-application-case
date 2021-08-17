@@ -1,0 +1,153 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-17 18:04+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: app/settings.py:129 home/templates/layouts/app.html:48
+msgid "English"
+msgstr "English"
+
+#: app/settings.py:130 home/templates/layouts/app.html:47
+msgid "Turkish"
+msgstr "Turkish"
+
+#: home/templates/application_query.html:23
+msgid "Başvuru Sorgulama Formu"
+msgstr "Application Query Form"
+
+#: home/templates/application_query.html:28
+#: home/templates/application_query.html:29
+#: home/templates/application_query.html:47
+msgid "Başvuru Kodu"
+msgstr "Application Form Code"
+
+#: home/templates/application_query.html:31
+#: home/templates/application_query.html:51
+#: home/templates/application_query.html:60
+#: home/templates/application_query.html:69
+#: home/templates/application_query.html:79
+#: home/templates/application_query.html:88
+#: home/templates/application_query.html:99 home/templates/index.html:31
+#: home/templates/index.html:39 home/templates/index.html:48
+#: home/templates/index.html:57 home/templates/index.html:65
+msgid "Bu alan zorunludur."
+msgstr "This field is mandatory."
+
+#: home/templates/application_query.html:36
+msgid "Başvuruyu Sorgula"
+msgstr "Application Query"
+
+#: home/templates/application_query.html:43 home/templates/index.html:23
+msgid "Başvuru Formu"
+msgstr "Application Form"
+
+#: home/templates/application_query.html:48
+msgid " Başvuru Kodu"
+msgstr "Application Form Code"
+
+#: home/templates/application_query.html:56 home/templates/index.html:28
+#: home/templates/index.html:29
+msgid "Başlık"
+msgstr "Title"
+
+#: home/templates/application_query.html:57
+#, fuzzy
+msgid " Başlık"
+msgstr "Title"
+
+#: home/templates/application_query.html:65 home/templates/index.html:36
+#: home/templates/index.html:37
+msgid "Açıklama"
+msgstr "Description"
+
+#: home/templates/application_query.html:66
+msgid " Açıklama"
+msgstr "Description"
+
+#: home/templates/application_query.html:74 home/templates/index.html:44
+#: home/templates/index.html:46
+msgid "Web Site Linki"
+msgstr "Web Site Link"
+
+#: home/templates/application_query.html:76
+msgid " Web Site Linki"
+msgstr "Web Site Link"
+
+#: home/templates/application_query.html:85 home/templates/index.html:54
+#: home/templates/index.html:55
+msgid "E-Posta"
+msgstr "E-Mail"
+
+#: home/templates/application_query.html:86
+msgid " E-Posta"
+msgstr "E-Mail"
+
+#: home/templates/application_query.html:93 home/templates/index.html:62
+msgid "Resim"
+msgstr "Image"
+
+#: home/templates/application_query.html:172 home/templates/index.html:118
+#: home/views.py:69 home/views.py:126
+msgid "Hmmm"
+msgstr "Hmmm"
+
+#: home/templates/application_query.html:173 home/templates/index.html:119
+msgid "En kısa sürede tekrardan deneyiniz"
+msgstr "Try again as soon as possible..."
+
+#: home/templates/index.html:71
+msgid "Başvuru Formunu Gönder"
+msgstr "Send Application Form"
+
+#: home/templates/layouts/app.html:13 home/templates/layouts/app.html:25
+msgid "Teknofest"
+msgstr "Teknofest"
+
+#: home/templates/layouts/app.html:33
+msgid "Ana Sayfa"
+msgstr "Home Page"
+
+#: home/templates/layouts/app.html:36
+msgid "Başvuru Sorgulama"
+msgstr "Application Query"
+
+#: home/templates/layouts/app.html:44
+msgid "Dil"
+msgstr "Language"
+
+#: home/views.py:63 home/views.py:121
+msgid "Tebrikler"
+msgstr "Congratulations"
+
+#: home/views.py:64
+msgid "Başvuru bilgileriniz yükleniyor"
+msgstr "Loading your reference information"
+
+#: home/views.py:70
+msgid "Lütfen başvuru kodunuzu kontrol edip tekrardan deneyinizz"
+msgstr "Please check your application code and try again"
+
+#: home/views.py:122
+msgid "Tebrikler başarılı bir şekilde başvurunuz yapıldı. Başvuru Kodunuz : {} "
+msgstr "Congratulations were successfully applied. Your Reference Code: {}"
+
+#: home/views.py:127
+
+msgid "Lütfen gerekli alanları doldurup, Tekrardan deneyiniz"
+msgstr "Please fill in the necessary fields and try again"
+

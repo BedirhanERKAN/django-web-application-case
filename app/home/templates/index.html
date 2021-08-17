@@ -1,0 +1,145 @@
+
+{% extends "layouts/app.html" %}
+
+{% load i18n %}
+{% load static %}
+{% get_current_language as LANGUAGE_CODE %}
+
+
+{% block content %}
+
+
+
+
+  <div class="container">
+    <main>
+      <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="{% static '' %}{{ LANGUAGE_CODE }}/img/logo.jpg" alt="" width="250" height="250">
+      </div>
+
+      <div class="row g-5">
+   
+        <div class="col-md-12 col-lg-12">
+          <h4 class="mb-3">{% trans "Başvuru Formu" %}</h4>
+          <form  id="submitForm" enctype="multipart/form-data" method="post" class="needs-validation" novalidate>
+            <div class="row g-3">
+
+              <div class="col-sm-12">
+                <label for="form_title" class="form-label">{% trans "Başlık" %}</label>
+                <input type="text" class="form-control" id="form_title" name="title" placeholder="{% trans "Başlık" %}" value="" required>
+                <div class="invalid-feedback">
+                  {% trans "Bu alan zorunludur." %}
+                </div>
+              </div>
+
+              <div class="col-sm-12">
+                <label for="description" class="form-label">{% trans "Açıklama" %}</label>
+                <textarea class="form-control" id="description" name="description" placeholder="{% trans "Açıklama" %}" required></textarea>
+                <div class="invalid-feedback">
+                  {% trans "Bu alan zorunludur." %}
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label for="websitelink" class="form-label">{% trans "Web Site Linki" %}</label>
+                <div class="input-group has-validation">
+                  <input type="text" class="form-control" id="websitelink" name="link" placeholder="{% trans "Web Site Linki" %}" required>
+                  <div class="invalid-feedback">
+                  {% trans "Bu alan zorunludur." %}
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label for="email" class="form-label">{% trans "E-Posta" %} </label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="{% trans "E-Posta" %} " required> 
+                <div class="invalid-feedback">
+                  {% trans "Bu alan zorunludur." %}
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label for="image" class="form-label">{% trans "Resim" %}</label>
+                <input type="file" class="form-control-file" name="image" id="image" required>
+                <div class="invalid-feedback">
+                  {% trans "Bu alan zorunludur." %}
+                </div>
+              </div>
+
+
+            {% csrf_token %}
+            <button  class="w-100 btn  btn-lg teknofest">{% trans "Başvuru Formunu Gönder" %}</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    
+</div>
+<script>
+  $(document).ready(function () 
+  {
+    $("#submitForm").submit(function (event) {
+      
+      event.preventDefault();
+      var formData = new FormData(this);
+
+      $.ajax({
+        type: "POST",
+        url: "/{{ lang }}/submit/",
+        data: formData,
+        dataType: 'json',
+
+        contentType: false,
+        processData: false,
+        success: function (data) 
+        {
+              Swal.fire(
+                data['title'],
+                data['message'],
+                data['result']
+              );
+
+              if(data['result']=="success")
+                document.getElementById("submitForm").reset();
+              
+
+        },
+        error: function (data) {       
+          if( (data['title']).length>0) 
+          {
+              Swal.fire(
+                data['title'],
+                data['message'],
+                data['result']
+              )
+          }else{
+              Swal.fire(
+                "{% trans 'Hmmm' %}",
+                "{% trans 'En kısa sürede tekrardan deneyiniz' %}",
+                "error",
+              )
+          }
+        }
+      });
+      return false; //<---- move it here
+    });
+
+});
+
+  document.querySelectorAll(".dropdown-toggle").forEach((item) => {
+    item.addEventListener("click", (event) => {
+      if (event.target.classList.contains("dropdown-toggle")) {
+        event.target.classList.toggle("toggle-change");
+      } else if (
+        event.target.parentElement.classList.contains("dropdown-toggle")
+      ) {
+        event.target.parentElement.classList.toggle("toggle-change");
+      }
+    });
+  });
+
+
+</script>
+
+{% endblock %}

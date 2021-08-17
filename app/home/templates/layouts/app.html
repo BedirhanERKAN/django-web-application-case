@@ -1,0 +1,66 @@
+{% load i18n %}
+{% load static %}
+{% get_current_language as LANGUAGE_CODE %}
+
+<!doctype html>
+<html lang="{{ LANGUAGE_CODE }}">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+
+    <title>{% block title %} {% trans "Teknofest" %} {% endblock %}</title>
+
+
+    <link href="{% static "css/bootstrap.min.css" %} " rel=" stylesheet">
+    <link href="{% static "style.css" %} " rel=" stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand  " >
+    <div class="container-md">
+        <a class="navbar-brand" href="/{{ lang }}/">{% trans "Teknofest" %}</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/{{ lang }}/">{% trans "Ana Sayfa" %}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/{{ lang }}/application-query/">{% trans "Başvuru Sorgulama" %}</a>
+                </li>
+                
+            </ul>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 profile-menu">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-user"></i> {% trans "Dil" %}
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/tr/"><i class="fas fa-cog fa-fw"></i> {% trans "Turkish" %}</a></li>
+                        <li><a class="dropdown-item" href="/en/"><i class="fas fa-sign-out-alt fa-fw"></i> {% trans "English" %}</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    
+ {% block content %}{% endblock %}
+
+<script src="{% static "js/bootstrap.bundle.min.js" %}"></script>
+<script src="{% static "js/form-validation.js" %} "></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>

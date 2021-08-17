@@ -1,0 +1,42 @@
+   .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+
+.profile-menu .dropdown-menu {
+  right: 0;
+  left: unset;
+}
+.profile-menu .fa-fw {
+  margin-right: 10px;
+}
+
+.toggle-change::after {
+  border-top: 0;
+  border-bottom: 0.3em solid;
+}
+
+.navbar, .navbar *{
+  background-color: #F05022; 
+  color: white !important;
+}
+
+.navbar a {
+  color: white !important;
+
+}
+
+.teknofest {
+   background-color: #F05022 !important; 
+  color: white !important;
+}
